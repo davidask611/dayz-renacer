@@ -13,67 +13,39 @@
   </header>
 
   <main>
-    <div class="fondo"></div>
-
-    <div class="grid">
-      <section>
+    <div class="main-row">
+      <section class="descargas">
         <h2>Descargas</h2>
         <p><strong>Juego base:</strong></p>
         <a href="https://drive.google.com/file/d/1D6RSNg6H1uqd7Q3IfvCDha7vTfhUj0QN/view">Parte 1</a> |
         <a href="https://drive.google.com/file/d/1zPUdwVqHjsRcTgQcfZVwXCftnGJdK3kO/view">Parte 2</a> |
         <a href="https://drive.google.com/file/d/1Md5FVdoxknbpWMJBMKPc5YWjLml6w4nz/view">Parte 3</a> |
         <a href="https://drive.google.com/file/d/1LooOfX2G2IVy4vx5sckANaSo7C8ooNgp/view">Parte 4</a>
-
         <p><strong>Mods:</strong></p>
-        <a href="https://drive.google.com/file/d/1kSqQTZvxzhKCb-Apiv_ztCGFYzLcvrab/view">Drive</a> |
-        <!-- <a href="#">Enlace 2</a> -->
-
+        <a href="https://drive.google.com/file/d/1kSqQTZvxzhKCb-Apiv_ztCGFYzLcvrab/view">Drive</a>
         <p><strong>Actualizaciones:</strong></p>
-        <a href="#">no hay por el momento</a> |
-        <!-- <a href="#">Enlace 2</a> -->
-
+        <a href="#">no hay por el momento</a>
         <p><strong>Alternativa Launcher</strong></p>
         <a href="https://www.mediafire.com/file/fiewvx6qeqn9h5o/Launcher_DayZ_Renacer.rar/file">Launcher</a>
       </section>
-      <section>
-        <h2>Para unirte al servidor</h2>
-        <p>Descargar Radmin</p>
-        <a href="https://www.radmin-vpn.com/" style="color: #0ff;;">Enlace</a>
-        <br><br>
-        <p>
-          red: MultiJuegos2024 <br><br>
-          clave: 123456
-        </p>
-      </section>
-      <section>
+      <div class="fondo"></div>
+      <section class="contacto">
         <h2>Contacto</h2>
         <ul class="contacto-lista">
           <li><a href="https://discord.gg/mAheYKhEB9"><img src="img_redes/discord.png" alt="Discord" class="icono" height="60px"> Discord</a></li>
           <li><a href="https://chat.whatsapp.com/ImZULrOvFDA0tM3cOMzMjO"><img src="img_redes/whatsapp.png" alt="WhatsApp" class="icono" width="60px" height="60px"> WhatsApp</a></li>
           <li><a href="mailto:soporte@renacerdayz.com"><img src="img_redes/email.png" alt="Email" class="icono" width="80px" height="60px"> Ticket</a></li>
         </ul>
-        
       </section>
-
-      <section>
-        <h2>Donaciones</h2>
-        <button onclick="mostrarDonacion()">Mostrar datos para donar</button>
-        <div id="donacion" class="oculto">
-          <br>
-          <p>¡Gracias por colaborar!</p>
-          <p>Alias: renacerdayz.mp</p>
-          <p>MercadoPago / Bitcoin</p>
-        </div>
-      </section>
-      <section>
-        <h2>Evento</h2>
-        <p>Este evento especial es un modo supervivencia extrema donde los jugadores
-           competirán por llegar a un lugar donde abra 3 barriles con recursos, como
-           arma, comida, remedio, municion etc.</p>
-        <p><strong>Fecha:</strong> Pronto</p>
-        <p><strong>Duración:</strong> 2 horas aproximado</p>
-      </section>      
     </div>
+
+    <!-- sección donaciones/paquetes después -->
+    <section class="paquetes-section">
+      <h2>Donaciones - Paquetes disponibles</h2>
+      <div id="paquetes-grid" class="paquetes-grid">
+        <!-- Los paquetes se agregan dinámicamente -->
+      </div>
+    </section>
   </main>
 
   <footer>

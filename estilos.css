@@ -21,23 +21,45 @@ header h1 {
   color: rgb(255, 68, 68);
 }
 
+.main-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.descargas,
+.contacto {
+  width: 260px;
+  min-width: 180px;
+  max-width: 300px;
+  background: #222;
+  padding: 18px 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  flex-shrink: 0;
+}
+
 .fondo {
-  width: 50%;
-  height: 50vh;
-  margin: 0 auto 30px;
-  background-image: url('img_fondo/elicrash.png');
+  width: 42.5vw;
+  max-width: 540px;
+  min-width: 260px;
+  height: 42.5vh;
+  margin: 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 15px;
   box-shadow: 0 0 15px #333;
+  flex-shrink: 0;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  /* margin-bottom: 30px; */
 }
 
 section {
@@ -103,8 +125,111 @@ footer li {
   font-size: 0.9rem;
 }
 
-.contacto-lista{
+.contacto-lista {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   list-style: none;
   text-align: center;
+  padding: 0;
+}
+
+/* --------- DONACIONES / PAQUETES --------- */
+
+.paquetes-section {
+  width: 80%;
+  margin: 40px auto 0 auto;
+  background: #191919;
+  padding: 25px 10px 40px 10px;
+  border-radius: 14px;
+  box-shadow: 0 0 10px #0007;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paquetes-section h2 {
+  text-align: center;
+  color: #4fe;
+  margin-bottom: 25px;
+}
+
+.paquetes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  width: 100%;
+  justify-items: center;
+}
+
+.paquete-card {
+  background: #232323;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 8px #000a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+  max-width: 320px;
+}
+
+.paquete-card h3 {
+  margin-bottom: 10px;
+  color: #ffb347;
+}
+
+.paquete-card p {
+  margin: 10px 0 15px 0;
+  color: #eee;
+}
+
+.paquete-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-comprar {
+  display: inline-block;
+  background: #25d366;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background .2s;
+}
+.btn-comprar:hover {
+  background: #128c7e;
+}
+
+/* Responsive para móviles */
+@media (max-width: 900px) {
+  .main-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .descargas, .contacto, .fondo {
+    width: 98vw;
+    max-width: 98vw;
+    min-width: unset;
+  }
+  .fondo {
+    height: 32vh;
+  }
+  .paquetes-section {
+    width: 98%;
+    padding: 10px 0 25px 0;
+  }
+  .paquetes-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
 }
